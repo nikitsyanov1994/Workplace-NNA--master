@@ -1,0 +1,226 @@
+.slider__wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.slider__photo {
+  overflow: hidden;
+  position: relative;
+  .photo {
+    margin: 0px -168px 0px -265px;
+    height: 100%;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 268%);
+  }
+}
+.slider__content-wrapper {
+  position: relative;
+  z-index: 3;
+  .slider__content-ready {
+    position: absolute;
+    top: -10%;
+    right: -20%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 10px 49px -18px rgba(0, 0, 0, 0.75);
+    background-image: url("../img/Vektor-Smartobjekt.png");
+    @include backgrdstyle;
+    position: absolute;
+    min-height: 200px;
+    width: 200px;
+  }
+  .slider__content-ready-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: default;
+    align-items: center;
+    .text {
+      color: $colorslideratactheading;
+      line-height: 30px;
+      font-size: 18px;
+      @include attachslider;
+    }
+    .count {
+      color: $colorsliderattach;
+      line-height: 100%;
+      font-size: 90px;
+      @include attachslider;
+    }
+    .mins {
+      color: $accentcolor;
+      line-height: 30px;
+      font-size: 18px;
+      @include attachslider;
+    }
+  }
+  .slider__content {
+    background-color: $menucolor;
+    position: relative;
+    height: 100%;
+    max-width: 550px;
+    padding: 80px 83px 35px 60px;
+    z-index: 4;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      left: -3%;
+      bottom: 42%;
+      background-color: $menucolor;
+    }
+    &:after {
+      content: "";
+      background-image: url("../img/bckgmelniza.png");
+      @include backgrdstyle;
+      position: absolute;
+      z-index: -1;
+      min-height: 300px;
+      width: 270px;
+      right: 0px;
+      bottom: 0px;
+    }
+
+    &-tittle {
+      padding-bottom: 15px;
+      .tittle {
+        font-family: $fontheadinsbold;
+        font-size: 54px;
+        line-height: 30px;
+        letter-spacing: 0.1px;
+        color: $textcolor;
+      }
+    }
+    &-subtittle {
+      padding-bottom: 60px;
+      .subtittle {
+        font-family: $fontheadinsbold;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.1px;
+        color: $subtittlecolorslider;
+        font-weight: bold;
+        word-wrap: break-word;
+      }
+    }
+    &-text {
+      padding-bottom: 45px;
+      .content-text {
+        @include textstyle;
+        letter-spacing: 0.1px;
+        color: $btncolorgradone;
+      }
+    }
+    &-rating {
+      padding-bottom: 37px;
+      text-align: left;
+      #reviewStars-input input:checked ~ label,
+      #reviewStars-input label,
+      #reviewStars-input label:hover,
+      #reviewStars-input label:hover ~ label {
+        background: url("../img/stars.png") no-repeat;
+      }
+
+      #reviewStars-input {
+        overflow: hidden;
+        *zoom: 1;
+        position: relative;
+        float: left;
+      }
+
+      #reviewStars-input input {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+      }
+
+      #reviewStars-input input:checked ~ label {
+        background-position: -2px -27px;
+        height: 14px;
+        width: 14px;
+      }
+
+      #reviewStars-input label {
+        background-position: -2px -5px;
+        height: 14px;
+        width: 14px;
+        float: right;
+        cursor: pointer;
+        margin-right: 10px;
+
+        position: relative;
+        z-index: 1;
+      }
+
+      #reviewStars-input label:hover,
+      #reviewStars-input label:hover ~ label {
+        background-position: -2px -27px;
+        height: 14px;
+        width: 14px;
+      }
+    }
+
+    &-rotate {
+      display: block;
+      position: relative;
+      &-sl1,
+      &-sl2,
+      &-sl3,
+      &-sl4 {
+        outline: none;
+      }
+      .slick-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: solid 2px $btncolorgradone;
+        outline: none;
+        background-color: $menucolor;
+        position: absolute;
+        z-index: 3;
+        cursor: pointer;
+        &:hover {
+          border-color: $colornextprew;
+        }
+      }
+      .slick-next {
+        right: 0;
+        top: 35%;
+        &::before {
+          @include nextprewstlye;
+          left: 7px;
+          top:6px;
+          content: "\e904";
+        }
+        &:hover:before {
+          color: $colornextprew;
+        }
+      }
+      .slick-prev {
+        top: 35%;
+        &::before {
+          @include nextprewstlye;
+          left: 6px;
+          top:6px;
+          content: "\e903";
+        }
+        &:hover:before {
+          color: $colornextprew;
+        }
+      }
+    }
+
+    .slider__content-background {
+      position: absolute;
+      top: 42%;
+      right: 0;
+      z-index: -1;
+    }
+  }
+}

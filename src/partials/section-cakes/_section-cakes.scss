@@ -1,0 +1,130 @@
+.cakes__left-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cakes__left {
+  padding: 0 70px;
+  text-align: center;
+  &-heading {
+    .heading {
+      font-family: $fontheadinsbold;
+      font-size: 54px;
+      line-height: 100%;
+      letter-spacing: 0.1px;
+      color: $headingcakescolor;
+    }
+  }
+  &-subheading {
+    padding-bottom: 63px;
+    .subheading {
+      font-family: $fontheadinsbold;
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.1px;
+      color: $subheadingcakescolor;
+      font-weight: bold;
+      text-align: center;
+      word-wrap: break-word;
+    }
+  }
+  &-content {
+    padding-bottom: 40px;
+    .content {
+      @include textstyle;
+      letter-spacing: 0.9px;
+      color: $btncolorgradone;
+    }
+  }
+  &-infoteam {
+    padding-bottom: 40px;
+    .infotext {
+      padding-bottom: 45px;
+      font-family: $fontheadinsbold;
+      color: $btncolorgradone;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.25px;
+      font-weight: bold;
+    }
+  }
+  &-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-img {
+      padding: 0px 20px;
+    }
+    .first_name,
+    .second_name {
+      font-family: $fontheadings;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0.25px;
+      font-weight: 500;
+      width: 110px;
+      border-top: solid 1px $bordercolor;
+      border-bottom: solid 1px $bordercolor;
+      padding: 20px 0;
+      text-align: center;
+    }
+  }
+  .cakes__left-quote {
+    position: relative;
+    &:before {
+      @include quoteslyle;
+      content: "\e977";
+      top: -10px;
+      left: 56px;
+    }
+    &::after {
+      @include quoteslyle;
+      bottom: -10px;
+      right: 56px;
+    }
+  }
+}
+
+.cakes__right {
+  display: flex;
+  position: relative;
+  &-flour,
+  &-egs,
+  &-chocolate,
+  &-Strawberry {
+    @include imagesframestyle;
+  }
+  .cakes__right-label {
+    align-items: center;
+    position: absolute;
+    align-content: center;
+    top: 10px;
+    left: 173px;
+
+    .label {
+      position: absolute;
+      top: 126px;
+      opacity: 1;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.95;
+        transition: 0.5s;
+      }
+    }
+    .textlabel {
+      max-width: 154px;
+      min-height: 140px;
+      position: relative;
+      word-wrap: break-word;
+      left: 66px;
+      top: 223px;
+      font-family: $fontheadings;
+      font-size: 30px;
+      line-height: 30px;
+      letter-spacing: 0.5px;
+      color: $labeltextcolor;
+      text-align: center;
+    }
+  }
+}

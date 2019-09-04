@@ -1,0 +1,142 @@
+.sandwich__top {
+  text-align: center;
+  .heading {
+    @include sandwichheadings;
+    font-size: 42px;
+    color: $btncolorgradone;
+    padding-bottom: 10px;
+  }
+  .subheading {
+    @include sandwichheadings;
+    font-size: 13px;
+    color: $colorslideratactheading;
+  }
+}
+.sandwich__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_left {
+    margin-top: -20px;
+    text-align: center;
+    padding-right: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 750px;
+    &-first {
+      padding-bottom: 50px;
+      .first {
+        @include sandwichleftimg;
+      }
+      .tittle {
+        @include sandwichtittle;
+      }
+      .text {
+        @include sandwichtext;
+      }
+    }
+    &-second {
+      padding-bottom: 50px;
+      .second {
+        @include sandwichleftimg;
+      }
+
+      .tittle {
+        @include sandwichtittle;
+      }
+      .text {
+        @include sandwichtext;
+      }
+    }
+
+    &-thirst {
+      .thrist {
+        @include sandwichleftimg;
+      }
+      .tittle {
+        @include sandwichtittle;
+      }
+      .text {
+        @include sandwichtext;
+      }
+    }
+  }
+}
+.sandwich__bottom-right {
+  &-backgrd {
+    position: relative;
+    .recipe {
+      padding: 0 30px;
+      min-height: 60px;
+      position: absolute;
+      font-family: $fontheadinsbold;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 14px;
+      background-color: $menucolor;
+      bottom: -17px;
+      left: -21px;
+      color: $colorrecipe;
+      text-align: center;
+      border-style: dashed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .elemnts {
+    top: -577px;
+    left: -10px;
+    position: relative;
+
+    .sandwich__bottom-right-top {
+      top: 0;
+      &:hover {
+        transform: scaleY(1.02);
+      }
+      @include sandwichrighcards;
+      .text_top {
+        @include sandwichcardstext;
+      }
+      .count_top {
+        @include sandwichcardscount;
+      }
+      .mins_top {
+        @include sandwichcardsmins;
+      }
+    }
+    .sandwich__bottom-right-mid {
+      top: 201px;
+      &:hover {
+        transform: scaleY(1.02);
+      }
+      @include sandwichrighcards;
+      .text_mid {
+        @include sandwichcardstext;
+      }
+      .count_mid {
+        @include sandwichcardscount;
+      }
+      .mins_mid {
+        @include sandwichcardsmins;
+      }
+    }
+    .sandwich__bottom-right-bot {
+      top: 403px;
+      &:hover {
+        transform: scaleY(1.02);
+      }
+      @include sandwichrighcards;
+      .text_bot {
+        @include sandwichcardstext;
+      }
+      .count_bot {
+        @include sandwichcardscount;
+      }
+      .mins_bot {
+        @include sandwichcardsmins;
+      }
+    }
+  }
+}

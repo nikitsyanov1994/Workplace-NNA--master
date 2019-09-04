@@ -1,0 +1,173 @@
+@mixin backgrdstyle {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@mixin navstyle {
+  font: {
+    family: $fontheadings;
+    size: 14px;
+  }
+  line-height: 24px;
+  letter-spacing: 4.2px;
+  align-items: center;
+  text-decoration: none;
+}
+@mixin logostyle {
+  font: {
+    family: $fontlogo;
+    size: 30px;
+  }
+  line-height: 24px;
+  letter-spacing: 9px;
+  text-decoration: none;
+}
+@mixin afternavstyle {
+  font: {
+    family: $fontheadings;
+    size: 14px;
+  }
+  position: absolute;
+  content: "~";
+  align-items: center;
+  line-height: 24px;
+  letter-spacing: 4.2px;
+  top: 0px;
+  right: 37px;
+}
+@mixin socialstyle {
+  font: {
+    family: "icomoon";
+    size: 14px;
+  }
+  position: absolute;
+  color: $menucolor;
+  line-height: 24px;
+  top: -11px;
+}
+@mixin socailstylehovbef {
+  transition: 0.9s;
+  transform: scale(1.2);
+}
+@mixin quoteslyle {
+  content: "\e978";
+  font: {
+    family: "icomoon";
+    size: 16px;
+  }
+  position: absolute;
+  color: $quotecolor;
+}
+@mixin imagesframestyle {
+  outline: solid 4px white;
+  outline-offset: -19px;
+  padding: 8px;
+}
+@mixin textstyle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+}
+@mixin nextprewstlye {
+  position: absolute;
+  font-family: "icomoon";
+  font-size: 13px;
+  font-weight: bold;
+  color: $btncolorgradone;
+  top: 7px;
+}
+@mixin attachslider {
+  font-weight: bold;
+  letter-spacing: 0.1px;
+  text-align: center;
+  font-family: $fontheadinsbold;
+}
+@mixin sandwichheadings {
+  font-family: $fontheadinsbold;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+}
+@mixin sandwichleftimg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #996666;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+    transition: 0.7s;
+  }
+}
+@mixin sandwichtittle {
+  font-family: $fontheadinsbold;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: 0.25px;
+  color: $colorslideratactheading;
+  padding: 20px 0;
+}
+@mixin sandwichtext {
+  font-family: $fontaccenttext;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: $headingcakescolor;
+  font-weight: 600;
+}
+@mixin sandwichrighcards {
+  right: 0;
+  position: absolute;
+  background-color: $menucolor;
+  opacity: 0.8;
+  min-width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &:hover {
+    opacity: 1;
+    content: none;
+    background-image: url(../../img/Vektor-Smartobjekt.png);
+    transition: 0.5s;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@mixin sandwichcardstext {
+  color: $colorslideratactheading;
+  font-family: $fontheadinsbold;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+  font-size: 18px;
+  text-align: center;
+}
+@mixin sandwichcardscount {
+  color: $headingcakescolor;
+  font-family: $fontheadinsbold;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: 0.1px;
+  font-size: 54px;
+  &:hover {
+    color: $colorsliderattach;
+    transform: scale(1.2);
+    transition: 0.5s;
+  }
+}
+@mixin sandwichcardsmins {
+  color: $accentcolor;
+  font-family: $fontheadinsbold;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+  font-size: 14px;
+  &:hover {
+    color: $accentcolor;
+  }
+}
