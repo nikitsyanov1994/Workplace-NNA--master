@@ -105,12 +105,8 @@
     .label {
       position: absolute;
       top: 126px;
-      opacity: 1;
+      opacity: 0.95;
       cursor: pointer;
-      &:hover {
-        opacity: 0.95;
-        transition: 0.5s;
-      }
     }
     .textlabel {
       max-width: 154px;
